@@ -9,6 +9,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/af9e0608d9.js" crossorigin="anonymous"></script>
         <style>
+            html{
+                scroll-behavior: smooth;
+            }
             body {
                 background: #20232a;
                 color: #fff;
@@ -74,7 +77,28 @@
             .fa-icons i:hover {
                 color: #1882a5;
             }
-    
+
+            .project{
+                transition: background-color 0.3s ease;
+            }
+
+            .project:target{
+                background-color: #0ed66c;
+            }
+
+            .project:target{
+                animation: highlight 2.2s ease forwards;
+            }
+
+            @keyframes highlight{
+                0%{
+                    background-color: #0ed66c;
+                }
+                100%{
+                    background-color: transparent;
+                }
+            }
+
             #Contact-Info {
                 text-align: center;
                 margin-top: 20px;
@@ -140,12 +164,12 @@
         <h2 id="Job-Title" style="color: rgb(230, 219, 205);">Software Developer</h2>
         <br>
         <div class="fa-icons">
-            <i class="fab fa-python"></i>
-            <i class="fab fa-java"></i>
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fas fa-database"></i>
+            <a href="#Python"><i class="fab fa-python"></i></a>
+            <a href="#Java"><i class="fab fa-java"></i></a>
+            <a href="#HTML"><i class="fab fa-html5"></i></a>
+            <a href="#HTML"><i class="fab fa-js"></i></a>
+            <a href="#HTML"><i class="fab fa-css3-alt"></i></a>
+            <a href="#Flutter"><i class="fas fa-database"></i></a>
         </div>
         
     </div>
@@ -173,10 +197,10 @@
     <div class="Information">
         <br>
         <h1>Projects</h1>
-        <p><span class="highlighted-text">Typeroo Mobile Game</span><br> OJT Project - March 2023 <br> Flutter, Java, Git, Android Studio, Figma</p>
-        <p><span class="highlighted-text">Doynamic Banking System</span><br> 1st Semester Final Project - November 2023 <br> Developed a sample of a secure banking system using Python and Git.</p>
-        <p><span class="highlighted-text">Typeroo Desktop App</span><br> 2nd Semester Final Project - April 2024 <br> Made a desktop version of a previous project called "Typeroo" into a desktop game using the programming language: Java</p>
-
+        <p id="Flutter" class="project"><span class="highlighted-text">Typeroo Mobile Game</span><br> OJT Project - March 2023 <br> Flutter, Java, Git, Android Studio, Figma</p>
+        <p id="Python" class="project"><span class="highlighted-text">Doynamic Banking System</span><br> 1st Semester Final Project - November 2023 <br> Developed a sample of a secure banking system using Python and Git.</p>
+        <p id="Java" class="project"><span class="highlighted-text">Typeroo Desktop App</span><br> 2nd Semester Final Project - April 2024 <br> Made a desktop version of a previous project called "Typeroo" into a desktop game using the programming language: Java</p>
+        <p id="HTML" class="project"><span class="highlighted-text">Legendary Motorsports</span><br> 2nd Semester Final Project - April 2024 <br> Made super car wiki inspired by GTA V's online car shop using HTML, CSS, Javascript, Tailwind CSS.</p>
     </div>
 
     <div class="Information">
